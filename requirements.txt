@@ -1,0 +1,3 @@
+Flask==0.11.1
+gunicorn==19.7.1
+ibm_cloud_env~=0.0

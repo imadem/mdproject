@@ -1,0 +1,29 @@
+container-name-run : "mdproject-flask-run"
+container-name-tools : "mdproject-flask-tools"
+
+host-path-run : "."
+host-path-tools : "."
+
+container-path-run : "/app"
+container-path-tools : "/app"
+
+container-port-map : "3000:3000"
+container-port-map-debug : "5858:5858"
+
+dockerfile-run : "Dockerfile"
+dockerfile-tools : "Dockerfile-tools"
+
+image-name-run : "mdproject-flask-run"
+image-name-tools : "mdproject-flask-tools"
+
+build-cmd-run : "python -m compileall server test"
+test-cmd : "python -m unittest tests.app_tests.ServerTestCase"
+build-cmd-debug : "python -m compileall server test"
+
+run-cmd : ""
+debug-cmd : "python -m flask run --host=0.0.0.0 --port=5858 --debugger"
+stop-cmd : ""
+
+chart-path : "chart/mdproject"
+
+version : "0.0.3"
